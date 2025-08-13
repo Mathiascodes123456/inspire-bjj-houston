@@ -4,9 +4,64 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Inspire Jiu-Jitsu Academy Houston</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Inspire Jiu-Jitsu Academy</h1>
-  <p>Houston • River Oaks • Brazilian Jiu Jitsu (BJJ)</p>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Inspire Jiu-Jitsu Academy</h1>
+      <nav class="main-nav">
+        <a href="#programs">Programs</a>
+        <a href="#book">Book Trial</a>
+        <a href="YOUR_GYMDESK_SHOP_URL">Shop</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="container">
+        <h2>Train Brazilian Jiu Jitsu (BJJ) in River Oaks, Houston</h2>
+        <p>Beginner-friendly. Kids and adults. Clean mats. World-class coaching.</p>
+        <a class="btn" href="#book">Book Your Free Trial</a>
+      </div>
+    </section>
+
+    <section id="programs" class="section">
+      <div class="container">
+        <h2>Programs</h2>
+        <ul class="programs">
+          <li>Adults BJJ (Gi)</li>
+          <li>No-Gi / Submission Grappling</li>
+          <li>Kids Brazilian Jiu Jitsu (Ages 4+)</li>
+          <li>Private Lessons</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="book" class="section">
+      <div class="container">
+        <h2>Book Your Free Trial</h2>
+        <!-- Gymdesk booking widget will go here in Lesson 3 -->
+        <p>Pick a time on our schedule. Questions? Text (346) 353-7799.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>4019 Richmond Ave, Houston, TX 77027 • (346) 353-7799</p>
+        <p><a class="btn" href="https://maps.google.com/?q=4019+Richmond+Ave+Houston+TX+77027" target="_blank" rel="noopener">Open in Google Maps</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Inspire Jiu-Jitsu Academy</small>
+    </div>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </footer>
 </body>
 </html>
