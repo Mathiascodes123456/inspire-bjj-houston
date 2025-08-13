@@ -41,29 +41,23 @@
     </section>
 
     <section id="book" class="section">
-  <div class="container booking-wrap">
-    <h2>Book Your Free Trial</h2>
-    <ol class="booking-steps">
-      <li>Pick a class time on the schedule below.</li>
-      <div class="gymdesk-schedule" attr-gym="D2nYZ" attr-schedule="all" attr-program="all"></div>
-      <li>Click <strong>Book</strong>.</li>
-      <li>Enter your info and confirm.</li>
-    </ol>
+      <div class="container booking-wrap">
+        <h2>Book Your Free Trial</h2>
+        <ol class="booking-steps">
+          <li>Pick a class time on the schedule below.</li>
+          <li>Click <strong>Book</strong>.</li>
+          <li>Enter your info and confirm.</li>
+        </ol>
 
-    <!-- Gymdesk schedule/booking widget -->
-    <div role="booking-widget" attr-schedule="2801"></div>
+        <!-- Gymdesk full schedule embed (choose ONE approach; we use this one) -->
+        <div class="gymdesk-schedule" attr-gym="D2nYZ" attr-schedule="all" attr-program="all"></div>
 
-    <!-- Fallback link (in case the widget is blocked) -->
-    <p class="booking-fallback">
-      Having trouble? <a href="YOUR_PUBLIC_GYMDESK_SCHEDULE_URL" target="_blank" rel="noopener">Open the schedule in a new tab</a>.
-    </p>
-  </div>
-</section>
-
-<!-- keep this once near the end of the file, above </body> -->
-<script src="https://gymdesk.com/js/widgets.js"></script>
-
-
+        <!-- Optional: fallback link if scripts are blocked -->
+        <p class="booking-fallback">
+          Having trouble? <a href="YOUR_PUBLIC_GYMDESK_SCHEDULE_URL" target="_blank" rel="noopener">Open the schedule in a new tab</a>.
+        </p>
+      </div>
+    </section>
 
     <section id="contact" class="section">
       <div class="container">
@@ -80,7 +74,9 @@
     </div>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   </footer>
-  <script src="https://gymdesk.com/js/widgets.js"></script>
 
+  <!-- Important: include this ONCE, right before </body> -->
+  <script src="https://gymdesk.com/js/widgets.js"></script>
 </body>
 </html>
+
