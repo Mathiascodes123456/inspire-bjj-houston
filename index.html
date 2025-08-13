@@ -41,12 +41,15 @@
     </section>
 
     <section id="book" class="section">
-      <div class="container">
-        <h2>Book Your Free Trial</h2>
-        <!-- Gymdesk booking widget will go here in Lesson 3 -->
-        <p>Pick a time on our schedule. Questions? Text (346) 353-7799.</p>
-      </div>
-    </section>
+  <div class="container">
+    <h2>Book Your Free Trial</h2>
+
+    <!-- This is the widget box -->
+    <div role="booking-widget" attr-schedule="2801"></div>
+
+  </div>
+</section>
+
 
     <section id="contact" class="section">
       <div class="container">
@@ -63,5 +66,7 @@
     </div>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   </footer>
+  <script src="https://gymdesk.com/js/widgets.js"></script>
+
 </body>
 </html>
