@@ -1,0 +1,16 @@
+:root { --bg:#0f172a; --ink:#0b1324; --ink-soft:#3b4252; --white:#fff; --accent:#10b981; }
+*{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);line-height:1.6}
+.container{max-width:1000px;margin:0 auto;padding:0 20px}
+.site-header{background:var(--bg);color:var(--white)}
+.logo{margin:0;font-size:1.25rem}
+.main-nav a{color:var(--white);text-decoration:none;margin-left:18px}
+.main-nav a:hover{text-decoration:underline}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;padding:16px 20px}
+.hero{background:#f8fafc;padding:60px 0;text-align:left}
+.hero h2{margin:0 0 10px;font-size:2rem}
+.btn{display:inline-block;padding:10px 16px;border-radius:8px;background:var(--accent);color:var(--white);text-decoration:none;font-weight:600}
+.btn:hover{filter:brightness(0.95)}
+.section{padding:48px 0}
+.section h2{margin-top:0}
+.programs{margin:0;padding-left:18px}
+.site-footer{background:#f1f5f9;padding:20px 0;color:var(--ink-soft);text-align:center;font-size:.9rem}
