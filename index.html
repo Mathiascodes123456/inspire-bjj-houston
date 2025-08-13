@@ -49,8 +49,9 @@
           <li>Enter your info and confirm.</li>
         </ol>
 
-        <!-- Gymdesk full schedule embed (choose ONE approach; we use this one) -->
+        <!-- Gymdesk full schedule embed -->
         <div class="gymdesk-schedule" attr-gym="D2nYZ" attr-schedule="all" attr-program="all"></div>
+      </div> <!-- ✅ close the container -->
     </section>
 
     <section id="contact" class="section">
@@ -69,8 +70,7 @@
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   </footer>
 
-  <!-- Important: include this ONCE, right before </body> -->
+  <!-- Load Gymdesk widgets ONCE -->
   <script src="https://gymdesk.com/js/widgets.js"></script>
 </body>
 </html>
-
