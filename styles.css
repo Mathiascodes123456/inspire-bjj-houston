@@ -17,3 +17,11 @@
 html { scroll-behavior: smooth; }
 .booking-wrap { max-width: 960px; }
 .booking-steps { margin: 0 0 12px 18px; }
+.preview-banner {
+  background: #fde68a;
+  color: #111827;
+  text-align: center;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+}
+
