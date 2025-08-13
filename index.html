@@ -41,14 +41,27 @@
     </section>
 
     <section id="book" class="section">
-  <div class="container">
+  <div class="container booking-wrap">
     <h2>Book Your Free Trial</h2>
+    <ol class="booking-steps">
+      <li>Pick a class time on the schedule below.</li>
+      <li>Click <strong>Book</strong>.</li>
+      <li>Enter your info and confirm.</li>
+    </ol>
 
-    <!-- This is the widget box -->
+    <!-- Gymdesk schedule/booking widget -->
     <div role="booking-widget" attr-schedule="2801"></div>
 
+    <!-- Fallback link (in case the widget is blocked) -->
+    <p class="booking-fallback">
+      Having trouble? <a href="YOUR_PUBLIC_GYMDESK_SCHEDULE_URL" target="_blank" rel="noopener">Open the schedule in a new tab</a>.
+    </p>
   </div>
 </section>
+
+<!-- keep this once near the end of the file, above </body> -->
+<script src="https://gymdesk.com/js/widgets.js"></script>
+
 
 
     <section id="contact" class="section">
