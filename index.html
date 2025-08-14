@@ -1,13 +1,13 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- Basic document setup -->
+  <!-- Document basics -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Inspire Jiu-Jitsu Academy Houston</title>
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- TEMP: Keep this until you're ready for search engines -->
+  <!-- TEMP: keep private until you're ready for search -->
   <meta name="robots" content="noindex, nofollow" />
 
   <!-- SEO -->
@@ -25,7 +25,7 @@
   <meta name="twitter:title" content="Inspire Jiu-Jitsu Academy Houston" />
   <meta name="twitter:description" content="Train BJJ in River Oaks. Kids & adult classes. Free trial available." />
 
-  <!-- LocalBusiness schema (helps Google understand NAP when you go public) -->
+  <!-- LocalBusiness schema (helps later when you go public) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -48,17 +48,29 @@
   <!-- Icons -->
   <link rel="icon" href="images/favicon.svg?v=5" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+
+  <!-- Optional: Google Analytics 4 (add your ID, then remove noindex above)
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
 </head>
 
 <body>
-  <!-- Header / Nav -->
+  <!-- Header / Navigation -->
   <header class="site-header">
     <div class="container">
       <h1 class="logo">Inspire Jiu-Jitsu Academy</h1>
       <nav class="main-nav" aria-label="Main navigation">
         <a href="#programs">Programs</a>
         <a href="#book">Book Trial</a>
-        <a href="https://inspirejiujitsuacademy.gymdesk.com/shop">Shop</a>
+        <a href="https://inspirejiujitsuacademy.gymdesk.com/shop?utm_source=site&utm_medium=nav&utm_campaign=shop" target="_blank" rel="noopener">
+          Shop
+        </a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -112,17 +124,26 @@
     <section id="contact" class="section">
       <div class="container">
         <h2>Contact</h2>
-        <p>4019 Richmond Ave, Houston, TX 77027 • (346) 353-7799</p>
+
+        <!-- Clickable phone; add your email if you want a button -->
+        <p>
+          4019 Richmond Ave, Houston, TX 77027 •
+          <a href="tel:+13463537799">(346) 353-7799</a>
+        </p>
         <p>
           <a class="btn" href="https://maps.google.com/?q=4019+Richmond+Ave+Houston+TX+77027" target="_blank" rel="noopener">
             Open in Google Maps
           </a>
+          <!-- Optional email button: replace with your real inbox or remove -->
+          <a class="btn" href="mailto:info@inspirejiujitsuacademy.com?subject=Inquiry%20from%20website">
+            Email Us
+          </a>
         </p>
 
-        <!-- Google Form embed (replace the src URL with your form's embed URL) -->
+        <!-- Google Form embed: replace src with your form's embed URL -->
         <div class="form-embed">
           <iframe
-            src= "https://docs.google.com/forms/d/e/1FAIpQLSdrB7tmio1fKzVnhBNVZqAEmijYEDdYGRnI_JTYOKTaDOu4EQ/viewform?embedded=true"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSdrB7tmio1fKzVnhBNVZqAEmijYEDdYGRnI_JTYOKTaDOu4EQ/viewform?embedded=true"
             style="width:100%; height:720px; border:0;"
             loading="lazy">
           </iframe>
@@ -145,3 +166,4 @@
   <script src="https://gymdesk.com/js/widgets.js"></script>
 </body>
 </html>
+
