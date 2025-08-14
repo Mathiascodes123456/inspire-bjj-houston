@@ -93,6 +93,16 @@ html { scroll-behavior: smooth; }
   .hero { min-height: 60vh; }        /* give the hero breathing room on desktop */
   .hero .container { max-width: 720px; }  /* keep line length comfy */
 }
+/* SLIGHT zoom-out feel on desktop (keeps background-size: cover) */
+@media (min-width: 1024px) {
+  .hero {
+    /* shorter hero = less crop = looks less zoomed */
+    padding: 64px 0;     /* was ~90px */
+    min-height: 48vh;    /* was 60vh (if you set that earlier) */
+    background-position: center 25%; /* nudge focal point if needed */
+  }
+}
+
 
 /* Optional: serve different crops (uncomment if you add both files)
 .hero{
