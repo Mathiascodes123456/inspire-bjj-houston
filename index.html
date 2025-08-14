@@ -7,7 +7,7 @@
   <title>Inspire Jiu-Jitsu Academy Houston</title>
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- TEMP: keep private until you’re ready for search (remove this when going live) -->
+  <!-- TEMP: keep private until you’re ready for search (remove when going live) -->
   <meta name="robots" content="noindex, nofollow" />
 
   <!-- ===== SEO ===== -->
@@ -23,7 +23,7 @@
   <meta name="twitter:title" content="Inspire Jiu-Jitsu Academy Houston" />
   <meta name="twitter:description" content="Train BJJ in River Oaks. Kids & adult classes. Free trial available." />
 
-  <!-- LocalBusiness schema (helps later when you go public) -->
+  <!-- LocalBusiness schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -47,20 +47,10 @@
   <link rel="icon" href="images/favicon.svg?v=5" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
 
-  <!-- TEMPORARY: disable hero background image (remove this when adding a photo) -->
+  <!-- TEMP: no hero photo right now -->
   <style>
     .hero { background-image: none !important; background-color: #f8fafc; }
   </style>
-
-  <!-- Optional: Google Analytics 4 (add your ID, then remove noindex above)
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
-  -->
 </head>
 
 <body>
@@ -69,7 +59,7 @@
     <div class="container">
       <h1 class="logo">Inspire Jiu-Jitsu Academy</h1>
 
-      <!-- Mobile menu button (hamburger) -->
+      <!-- Mobile menu button -->
       <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">
         <span class="nav-toggle-bar"></span>
         <span class="nav-toggle-bar"></span>
@@ -80,16 +70,20 @@
       <nav id="main-nav" class="main-nav" aria-label="Main navigation">
         <a href="#programs">Programs</a>
         <a href="#book">Book Trial</a>
-        <!-- UTM so you can see shop clicks in analytics -->
         <a href="https://inspirejiujitsuacademy.gymdesk.com/shop?utm_source=site&utm_medium=nav&utm_campaign=shop" target="_blank" rel="noopener">Shop</a>
         <a href="#contact">Contact</a>
+        <!-- Login button to Gymdesk portal -->
+        <a class="btn-login" href="https://inspirejiujitsuacademy.gymdesk.com/login?utm_source=site&utm_medium=nav&utm_campaign=login">Log in</a>
+        <!-- If the above 404s for your account, try:
+        <a class="btn-login" href="https://inspirejiujitsuacademy.gymdesk.com/members/login">Log in</a>
+        -->
       </nav>
     </div>
   </header>
 
   <!-- ===== Main content ===== -->
   <main>
-    <!-- Hero (intro section) -->
+    <!-- Hero -->
     <section id="hero" class="hero">
       <div class="container">
         <h2>Train Brazilian Jiu Jitsu (BJJ) in River Oaks, Houston</h2>
@@ -98,7 +92,7 @@
       </div>
     </section>
 
-    <!-- Programs (cards) -->
+    <!-- Programs -->
     <section id="programs" class="section">
       <div class="container">
         <h2>Programs</h2>
@@ -136,18 +130,11 @@
           <li>Click <strong>Book</strong>.</li>
           <li>Enter your info and confirm.</li>
         </ol>
-
-        <!-- Gymdesk schedule widget -->
-        <div
-          class="gymdesk-schedule"
-          attr-gym="D2nYZ"
-          attr-schedule="all"
-          attr-program="all">
-        </div>
+        <div class="gymdesk-schedule" attr-gym="D2nYZ" attr-schedule="all" attr-program="all"></div>
       </div>
     </section>
 
-    <!-- Testimonials (social proof) -->
+    <!-- Testimonials -->
     <section id="testimonials" class="section">
       <div class="container">
         <h2>What students say</h2>
@@ -156,7 +143,7 @@
       </div>
     </section>
 
-    <!-- FAQ (common questions reduce friction) -->
+    <!-- FAQ -->
     <section id="faq" class="section">
       <div class="container">
         <h2>FAQ</h2>
@@ -179,24 +166,14 @@
     <section id="contact" class="section">
       <div class="container">
         <h2>Contact</h2>
-
-        <!-- Address + click-to-call -->
         <p>
           4019 Richmond Ave, Houston, TX 77027 •
           <a href="tel:+13463537799">(346) 353-7799</a>
         </p>
-
-        <!-- Map + email buttons -->
         <p>
-          <a class="btn" href="https://maps.google.com/?q=4019+Richmond+Ave+Houston+TX+77027" target="_blank" rel="noopener">
-            Open in Google Maps
-          </a>
-          <a class="btn" href="mailto:info@inspirejiujitsuacademy.com?subject=Inquiry%20from%20website">
-            Email Us
-          </a>
+          <a class="btn" href="https://maps.google.com/?q=4019+Richmond+Ave+Houston+TX+77027" target="_blank" rel="noopener">Open in Google Maps</a>
+          <a class="btn" href="mailto:info@inspirejiujitsuacademy.com?subject=Inquiry%20from%20website">Email Us</a>
         </p>
-
-        <!-- Google Form embed (replace with your own form if needed) -->
         <div class="form-embed">
           <iframe
             src="https://docs.google.com/forms/d/e/1FAIpQLSdrB7tmio1fKzVnhBNVZqAEmijYEDdYGRnI_JTYOKTaDOu4EQ/viewform?embedded=true"
@@ -213,10 +190,7 @@
     <div class="container">
       <small>© <span id="year"></span> Inspire Jiu-Jitsu Academy</small>
     </div>
-    <script>
-      // Keep the year current automatically
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   </footer>
 
   <!-- ===== JS: mobile nav toggle ===== -->
@@ -236,3 +210,4 @@
   <script src="https://gymdesk.com/js/widgets.js"></script>
 </body>
 </html>
+
