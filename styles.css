@@ -181,3 +181,12 @@ summary {
   .main-nav a { margin-left: 0; }
   .main-nav.is-open { display: flex; }
 }
+/* === Fix hero text contrast on light background === */
+.hero {
+  background-color: #f8fafc;   /* light grey background while no photo */
+  color: var(--ink);           /* dark text */
+}
+.hero h2,
+.hero p {
+  color: inherit;              /* ensure they use the dark text color */
+}
