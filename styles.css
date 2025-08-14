@@ -56,6 +56,22 @@ body {
 }
 .main-nav a:hover { text-decoration: underline; }
 
+/* Login button variant in header */
+.main-nav a.btn-login {
+  margin-left: 18px;
+  padding: 6px 12px;
+  line-height: 1;
+  border: 1px solid rgba(255,255,255,.65);
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+}
+.main-nav a.btn-login:hover {
+  border-color: #fff;
+  background: rgba(255,255,255,.10);
+  text-decoration: none;
+}
+
 /* Mobile nav toggle (hamburger) */
 .nav-toggle {
   display: none;                /* shown on small screens via media query */
@@ -76,20 +92,22 @@ body {
 }
 
 /* ===============================
-   Hero (intro section)
-   Note: background image is disabled in <head> with inline <style>.
-   Keep spacing & typography here.
+   Hero (no background image currently)
    =============================== */
 .hero {
   padding: 60px 0;
   text-align: left;
+  background-color: #f8fafc; /* ensure readable background */
+  color: var(--ink);
 }
 .hero h2 {
   margin: 0 0 10px;
   font-size: clamp(2rem, 2.5vw + 1rem, 3rem);
+  color: inherit;
 }
 .hero p {
   font-size: clamp(1rem, 1vw + .5rem, 1.25rem);
+  color: inherit;
 }
 
 /* ===============================
@@ -140,12 +158,8 @@ blockquote {
   border-left: 4px solid #e5e7eb;
   font-style: italic;
 }
-
 details { margin: 8px 0; }
-summary {
-  cursor: pointer;
-  font-weight: 600;
-}
+summary { cursor: pointer; font-weight: 600; }
 
 /* ===============================
    Contact / form embeds
@@ -180,13 +194,13 @@ summary {
   }
   .main-nav a { margin-left: 0; }
   .main-nav.is-open { display: flex; }
+
+  /* Make the header login stand out on mobile menu */
+  .main-nav a.btn-login {
+    color: var(--ink);
+    background: #fff;
+    border-color: #e5e7eb;
+  }
 }
-/* === Fix hero text contrast on light background === */
-.hero {
-  background-color: #f8fafc;   /* light grey background while no photo */
-  color: var(--ink);           /* dark text */
-}
-.hero h2,
-.hero p {
-  color: inherit;              /* ensure they use the dark text color */
-}
+
+
