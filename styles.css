@@ -86,5 +86,10 @@ html { scroll-behavior: smooth; }
   padding: 90px 0;
 }
 .hero h2, .hero p { color: #fff; }
+/* add to the bottom of styles.css */
+@media (min-width: 900px) {
+  .hero { min-height: 60vh; }     /* ~60% of the viewport height */
+}
+
 
 
