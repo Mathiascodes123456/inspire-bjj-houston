@@ -1,26 +1,24 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- Document basics -->
+  <!-- ===== Document basics ===== -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Inspire Jiu-Jitsu Academy Houston</title>
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- TEMP: keep private until you're ready for search -->
+  <!-- TEMP: keep private until you’re ready for search (remove this when going live) -->
   <meta name="robots" content="noindex, nofollow" />
 
-  <!-- SEO -->
+  <!-- ===== SEO ===== -->
   <meta name="description" content="Brazilian Jiu Jitsu (BJJ) in River Oaks, Houston. Kids and adult classes with Professor Eduardo Ramos. Free trial on Richmond Ave." />
   <link rel="canonical" href="https://mathiascodes123456.github.io/inspire-bjj-houston/" />
 
-  <!-- Open Graph (social preview) -->
+  <!-- Social (Open Graph / Twitter) -->
   <meta property="og:title" content="Inspire Jiu-Jitsu Academy Houston" />
   <meta property="og:description" content="Train BJJ in River Oaks. Kids & adult classes. Free trial available." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://mathiascodes123456.github.io/inspire-bjj-houston/" />
-
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Inspire Jiu-Jitsu Academy Houston" />
   <meta name="twitter:description" content="Train BJJ in River Oaks. Kids & adult classes. Free trial available." />
@@ -45,9 +43,14 @@
   }
   </script>
 
-  <!-- Icons -->
+  <!-- Site icons -->
   <link rel="icon" href="images/favicon.svg?v=5" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+
+  <!-- TEMPORARY: disable hero background image (remove this when adding a photo) -->
+  <style>
+    .hero { background-image: none !important; background-color: #f8fafc; }
+  </style>
 
   <!-- Optional: Google Analytics 4 (add your ID, then remove noindex above)
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -61,30 +64,32 @@
 </head>
 
 <body>
-  <!-- Header / Navigation -->
+  <!-- ===== Header / Navigation ===== -->
   <header class="site-header">
     <div class="container">
       <h1 class="logo">Inspire Jiu-Jitsu Academy</h1>
 
-      <!-- Mobile menu button -->
+      <!-- Mobile menu button (hamburger) -->
       <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">
         <span class="nav-toggle-bar"></span>
         <span class="nav-toggle-bar"></span>
         <span class="nav-toggle-bar"></span>
       </button>
 
+      <!-- Main navigation -->
       <nav id="main-nav" class="main-nav" aria-label="Main navigation">
         <a href="#programs">Programs</a>
         <a href="#book">Book Trial</a>
+        <!-- UTM so you can see shop clicks in analytics -->
         <a href="https://inspirejiujitsuacademy.gymdesk.com/shop?utm_source=site&utm_medium=nav&utm_campaign=shop" target="_blank" rel="noopener">Shop</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Main content -->
+  <!-- ===== Main content ===== -->
   <main>
-    <!-- Hero -->
+    <!-- Hero (intro section) -->
     <section id="hero" class="hero">
       <div class="container">
         <h2>Train Brazilian Jiu Jitsu (BJJ) in River Oaks, Houston</h2>
@@ -93,7 +98,7 @@
       </div>
     </section>
 
-    <!-- Programs -->
+    <!-- Programs (cards) -->
     <section id="programs" class="section">
       <div class="container">
         <h2>Programs</h2>
@@ -122,7 +127,7 @@
       </div>
     </section>
 
-    <!-- Book Trial (Gymdesk schedule embed) -->
+    <!-- Booking (Gymdesk schedule embed) -->
     <section id="book" class="section">
       <div class="container booking-wrap">
         <h2>Book Your Free Trial</h2>
@@ -132,7 +137,7 @@
           <li>Enter your info and confirm.</li>
         </ol>
 
-        <!-- Gymdesk full schedule embed -->
+        <!-- Gymdesk schedule widget -->
         <div
           class="gymdesk-schedule"
           attr-gym="D2nYZ"
@@ -142,7 +147,7 @@
       </div>
     </section>
 
-    <!-- Testimonials -->
+    <!-- Testimonials (social proof) -->
     <section id="testimonials" class="section">
       <div class="container">
         <h2>What students say</h2>
@@ -151,7 +156,7 @@
       </div>
     </section>
 
-    <!-- FAQ -->
+    <!-- FAQ (common questions reduce friction) -->
     <section id="faq" class="section">
       <div class="container">
         <h2>FAQ</h2>
@@ -175,11 +180,13 @@
       <div class="container">
         <h2>Contact</h2>
 
-        <!-- Clickable phone + map/email buttons -->
+        <!-- Address + click-to-call -->
         <p>
           4019 Richmond Ave, Houston, TX 77027 •
           <a href="tel:+13463537799">(346) 353-7799</a>
         </p>
+
+        <!-- Map + email buttons -->
         <p>
           <a class="btn" href="https://maps.google.com/?q=4019+Richmond+Ave+Houston+TX+77027" target="_blank" rel="noopener">
             Open in Google Maps
@@ -189,7 +196,7 @@
           </a>
         </p>
 
-        <!-- Google Form embed -->
+        <!-- Google Form embed (replace with your own form if needed) -->
         <div class="form-embed">
           <iframe
             src="https://docs.google.com/forms/d/e/1FAIpQLSdrB7tmio1fKzVnhBNVZqAEmijYEDdYGRnI_JTYOKTaDOu4EQ/viewform?embedded=true"
@@ -201,17 +208,18 @@
     </section>
   </main>
 
-  <!-- Footer -->
+  <!-- ===== Footer ===== -->
   <footer class="site-footer">
     <div class="container">
       <small>© <span id="year"></span> Inspire Jiu-Jitsu Academy</small>
     </div>
     <script>
+      // Keep the year current automatically
       document.getElementById('year').textContent = new Date().getFullYear();
     </script>
   </footer>
 
-  <!-- JS: mobile nav toggle -->
+  <!-- ===== JS: mobile nav toggle ===== -->
   <script>
     const toggle = document.querySelector('.nav-toggle');
     const nav = document.getElementById('main-nav');
@@ -224,9 +232,7 @@
     }
   </script>
 
-  <!-- External widgets (Gymdesk) -->
+  <!-- ===== External widgets (Gymdesk) ===== -->
   <script src="https://gymdesk.com/js/widgets.js"></script>
 </body>
 </html>
-
-
