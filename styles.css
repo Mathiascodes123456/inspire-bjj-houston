@@ -1,6 +1,21 @@
-:root { --bg:#0f172a; --ink:#0b1324; --ink-soft:#3b4252; --white:#fff; --accent:#10b981; }
+/* ===============================
+   Design tokens (colors, etc.)
+   =============================== */
+:root {
+  --bg: #0f172a;        /* header background (dark navy) */
+  --ink: #0b1324;       /* main text color */
+  --ink-soft: #3b4252;  /* muted text (footer, hints) */
+  --white: #fff;
+  --accent: #10b981;    /* brand accent (buttons) */
+}
 
+/* Global box sizing = easier layout math */
 * { box-sizing: border-box; }
+
+/* ===============================
+   Base / layout
+   =============================== */
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
@@ -9,118 +24,160 @@ body {
   line-height: 1.6;
 }
 
-.container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+/* Center content and limit line length */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
-/* Header / Nav */
-.site-header { background: var(--bg); color: var(--white); }
-.site-header .container { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; }
+/* ===============================
+   Header / navigation
+   =============================== */
+.site-header {
+  background: var(--bg);
+  color: var(--white);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+}
+
 .logo { margin: 0; font-size: 1.25rem; }
 
-.main-nav a { color: var(--white); text-decoration: none; margin-left: 18px; }
+/* Desktop nav links */
+.main-nav a {
+  color: var(--white);
+  text-decoration: none;
+  margin-left: 18px;
+}
 .main-nav a:hover { text-decoration: underline; }
 
-/* Mobile nav button */
-.nav-toggle { display: none; background: transparent; border: 0; cursor: pointer; }
-.nav-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-.nav-toggle-bar { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; }
+/* Mobile nav toggle (hamburger) */
+.nav-toggle {
+  display: none;                /* shown on small screens via media query */
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.nav-toggle:focus-visible {     /* keyboard-accessible outline */
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.nav-toggle-bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--white);
+  margin: 5px 0;
+}
 
-/* HERO — with overlay + focal point + nicer desktop behavior */
-.hero{
-  /* tweak these two to taste */
-  --hero-overlay: .50;               /* darker = higher number (e.g., .60) */
-  --hero-pos: center 30%;            /* try: center 20%, center 60%, left 40%, right 40% */
-
-  background-image:
-    linear-gradient(rgba(0,0,0,var(--hero-overlay)), rgba(0,0,0,var(--hero-overlay))),
-    url('images/hero.jpg');          /* update name if yours differs */
-  background-size: cover;
-  background-position: var(--hero-pos);
-  background-repeat: no-repeat;
-  color: #fff;
-  padding: 90px 0;
+/* ===============================
+   Hero (intro section)
+   Note: background image is disabled in <head> with inline <style>.
+   Keep spacing & typography here.
+   =============================== */
+.hero {
+  padding: 60px 0;
   text-align: left;
 }
-.hero h2, .hero p { color:#fff; }
+.hero h2 {
+  margin: 0 0 10px;
+  font-size: clamp(2rem, 2.5vw + 1rem, 3rem);
+}
+.hero p {
+  font-size: clamp(1rem, 1vw + .5rem, 1.25rem);
+}
 
-/* responsive hero typography */
-.hero h2 { margin: 0 0 10px; font-size: clamp(2rem, 2.5vw + 1rem, 3rem); }
-.hero p  { font-size: clamp(1rem, 1vw + .5rem, 1.25rem); }
-
-/* limit text width for readability */
-.hero .container { max-width: 900px; }
-
-/* Sections / Buttons */
+/* ===============================
+   Sections / buttons
+   =============================== */
 .section { padding: 48px 0; }
 .section h2 { margin-top: 0; }
 
 .btn {
-  display: inline-block; padding: 10px 16px; border-radius: 8px;
-  background: var(--accent); color: var(--white); text-decoration: none; font-weight: 600;
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
 }
 .btn:hover { filter: brightness(0.95); }
 
-/* Programs (simple list) */
-.programs { margin: 0; padding-left: 18px; }
-
-/* Optional: Programs grid — use when you switch HTML to <div class="programs-grid">… */
-.programs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
-.programs-grid article { border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; background: #fff; }
+/* ===============================
+   Programs (card grid)
+   =============================== */
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+.programs-grid article {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  background: #fff;
+}
 .programs-grid h3 { margin-top: 0; }
 
-/* Booking block */
+/* ===============================
+   Booking (Gymdesk block)
+   =============================== */
 .booking-wrap { max-width: 960px; }
 .booking-steps { margin: 0 0 12px 18px; }
 
-/* Contact / form embeds */
+/* ===============================
+   Testimonials / FAQ
+   =============================== */
+blockquote {
+  margin: 0 0 10px 0;
+  padding-left: 12px;
+  border-left: 4px solid #e5e7eb;
+  font-style: italic;
+}
+
+details { margin: 8px 0; }
+summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* ===============================
+   Contact / form embeds
+   =============================== */
 .form-embed { max-width: 800px; margin-top: 16px; }
 
-/* Footer */
-.site-footer { background: #f1f5f9; padding: 20px 0; color: var(--ink-soft); text-align: center; font-size: .9rem; }
+/* ===============================
+   Footer
+   =============================== */
+.site-footer {
+  background: #f1f5f9;
+  padding: 20px 0;
+  color: var(--ink-soft);
+  text-align: center;
+  font-size: .9rem;
+}
 
-/* Global niceties */
-html { scroll-behavior: smooth; }
-
-/* ======== BREAKPOINTS ======== */
+/* ===============================
+   Responsive: mobile nav behavior
+   =============================== */
 @media (max-width: 720px) {
   .site-header .container { gap: 12px; }
+
+  /* show hamburger, collapse nav links into a vertical list */
   .nav-toggle { display: block; }
-  .main-nav { display: none; flex-direction: column; gap: 10px; padding: 12px 0; }
+
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px 0;
+  }
   .main-nav a { margin-left: 0; }
   .main-nav.is-open { display: flex; }
 }
-
-@media (min-width: 900px) {
-  .hero { min-height: 60vh; }        /* give the hero breathing room on desktop */
-  .hero .container { max-width: 720px; }  /* keep line length comfy */
-}
-/* SLIGHT zoom-out feel on desktop (keeps background-size: cover) */
-@media (min-width: 1024px) {
-  .hero {
-    /* shorter hero = less crop = looks less zoomed */
-    padding: 64px 0;     /* was ~90px */
-    min-height: 48vh;    /* was 60vh (if you set that earlier) */
-    background-position: center 25%; /* nudge focal point if needed */
-  }
-}
-
-
-/* Optional: serve different crops (uncomment if you add both files)
-.hero{
-  --hero-overlay: .55;
-  background-image:
-    linear-gradient(rgba(0,0,0,var(--hero-overlay)), rgba(0,0,0,var(--hero-overlay))),
-    url('images/hero-mobile.jpg');
-}
-@media (min-width: 900px) {
-  .hero{
-    background-image:
-      linear-gradient(rgba(0,0,0,var(--hero-overlay)), rgba(0,0,0,var(--hero-overlay))),
-      url('images/hero-desktop.jpg');
-    background-position: center 30%;
-  }
-}
-*/
-
-
-
-
