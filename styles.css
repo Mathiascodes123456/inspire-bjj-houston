@@ -76,17 +76,8 @@ html { scroll-behavior: smooth; }
 }
 
 /* Optional: hero background image with overlay. Add images/hero.jpg to use:
-.hero {
-  background-image:
-    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
-    url('images/hero.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #fff;
-  padding: 90px 0;
-}
-.hero h2, .hero p { color: #fff; }
+
+
 */
 
 
