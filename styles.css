@@ -11,14 +11,47 @@ body {
 
 .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
 
+/* Header / Nav */
 .site-header { background: var(--bg); color: var(--white); }
+.site-header .container { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; }
 .logo { margin: 0; font-size: 1.25rem; }
+
 .main-nav a { color: var(--white); text-decoration: none; margin-left: 18px; }
 .main-nav a:hover { text-decoration: underline; }
-.site-header .container { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; }
 
-.hero { background: #f8fafc; padding: 60px 0; text-align: left; }
-.hero h2 { margin: 0 0 10px; font-size: 2rem; }
+/* Mobile nav button */
+.nav-toggle { display: none; background: transparent; border: 0; cursor: pointer; }
+.nav-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.nav-toggle-bar { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; }
+
+/* HERO — with overlay + focal point + nicer desktop behavior */
+.hero{
+  /* tweak these two to taste */
+  --hero-overlay: .50;               /* darker = higher number (e.g., .60) */
+  --hero-pos: center 30%;            /* try: center 20%, center 60%, left 40%, right 40% */
+
+  background-image:
+    linear-gradient(rgba(0,0,0,var(--hero-overlay)), rgba(0,0,0,var(--hero-overlay))),
+    url('images/hero.jpg');          /* update name if yours differs */
+  background-size: cover;
+  background-position: var(--hero-pos);
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 90px 0;
+  text-align: left;
+}
+.hero h2, .hero p { color:#fff; }
+
+/* responsive hero typography */
+.hero h2 { margin: 0 0 10px; font-size: clamp(2rem, 2.5vw + 1rem, 3rem); }
+.hero p  { font-size: clamp(1rem, 1vw + .5rem, 1.25rem); }
+
+/* limit text width for readability */
+.hero .container { max-width: 900px; }
+
+/* Sections / Buttons */
+.section { padding: 48px 0; }
+.section h2 { margin-top: 0; }
 
 .btn {
   display: inline-block; padding: 10px 16px; border-radius: 8px;
@@ -26,47 +59,28 @@ body {
 }
 .btn:hover { filter: brightness(0.95); }
 
-.section { padding: 48px 0; }
-.section h2 { margin-top: 0; }
+/* Programs (simple list) */
+.programs { margin: 0; padding-left: 18px; }
 
-.programs { margin: 0; padding-left: 18px; } /* kept for your current <ul> */
-
-/* === Programs grid (B) — use when you switch to <div class="programs-grid">… === */
+/* Optional: Programs grid — use when you switch HTML to <div class="programs-grid">… */
 .programs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
 .programs-grid article { border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; background: #fff; }
 .programs-grid h3 { margin-top: 0; }
-/* === end Programs grid === */
 
-.site-footer { background: #f1f5f9; padding: 20px 0; color: var(--ink-soft); text-align: center; font-size: .9rem; }
-
-html { scroll-behavior: smooth; }
+/* Booking block */
 .booking-wrap { max-width: 960px; }
 .booking-steps { margin: 0 0 12px 18px; }
-
-.preview-banner {
-  background: #fde68a;
-  color: #111827;
-  text-align: center;
-  padding: 6px 10px;
-  font-size: 0.9rem;
-}
 
 /* Contact / form embeds */
 .form-embed { max-width: 800px; margin-top: 16px; }
 
-.contact-form { max-width: 680px; margin-top: 16px; }
-.contact-form label { display: block; margin-bottom: 10px; font-weight: 600; }
-.contact-form input, .contact-form textarea {
-  width: 100%; padding: 10px; border: 1px solid #e5e7eb; border-radius: 8px; font: inherit;
-}
-.contact-form .cf-note { color: var(--ink-soft); font-size: .9rem; margin-top: 8px; }
+/* Footer */
+.site-footer { background: #f1f5f9; padding: 20px 0; color: var(--ink-soft); text-align: center; font-size: .9rem; }
 
-/* Mobile nav */
-.nav-toggle { display: none; background: transparent; border: 0; cursor: pointer; }
-.nav-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-.nav-toggle-bar { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; }
+/* Global niceties */
+html { scroll-behavior: smooth; }
 
-/* Mobile layout */
+/* ======== BREAKPOINTS ======== */
 @media (max-width: 720px) {
   .site-header .container { gap: 12px; }
   .nav-toggle { display: block; }
@@ -75,21 +89,28 @@ html { scroll-behavior: smooth; }
   .main-nav.is-open { display: flex; }
 }
 
-.hero{
-  background-image:
-    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
-    url('images/hero.jpg');   /* <-- this file you just uploaded */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #fff;
-  padding: 90px 0;
-}
-.hero h2, .hero p { color: #fff; }
-/* add to the bottom of styles.css */
 @media (min-width: 900px) {
-  .hero { min-height: 60vh; }     /* ~60% of the viewport height */
+  .hero { min-height: 60vh; }        /* give the hero breathing room on desktop */
+  .hero .container { max-width: 720px; }  /* keep line length comfy */
 }
+
+/* Optional: serve different crops (uncomment if you add both files)
+.hero{
+  --hero-overlay: .55;
+  background-image:
+    linear-gradient(rgba(0,0,0,var(--hero-overlay)), rgba(0,0,0,var(--hero-overlay))),
+    url('images/hero-mobile.jpg');
+}
+@media (min-width: 900px) {
+  .hero{
+    background-image:
+      linear-gradient(rgba(0,0,0,var(--hero-overlay)), rgba(0,0,0,var(--hero-overlay))),
+      url('images/hero-desktop.jpg');
+    background-position: center 30%;
+  }
+}
+*/
+
 
 
 
