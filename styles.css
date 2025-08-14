@@ -24,5 +24,12 @@ html { scroll-behavior: smooth; }
   padding: 6px 10px;
   font-size: 0.9rem;
   .form-embed { max-width: 800px; margin-top: 16px; }
+  .contact-form { max-width: 680px; margin-top: 16px; }
+.contact-form label { display:block; margin-bottom: 10px; font-weight: 600; }
+.contact-form input, .contact-form textarea {
+  width:100%; padding:10px; border:1px solid #e5e7eb; border-radius:8px; font: inherit;
+}
+.contact-form .cf-note { color: var(--ink-soft); font-size: .9rem; margin-top: 8px; }
+
 }
 
