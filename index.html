@@ -63,18 +63,25 @@
 <body>
   <!-- Header / Navigation -->
   <header class="site-header">
-    <div class="container">
-      <h1 class="logo">Inspire Jiu-Jitsu Academy</h1>
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="#programs">Programs</a>
-        <a href="#book">Book Trial</a>
-        <a href="https://inspirejiujitsuacademy.gymdesk.com/shop?utm_source=site&utm_medium=nav&utm_campaign=shop" target="_blank" rel="noopener">
-          Shop
-        </a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <div class="container">
+    <h1 class="logo">Inspire Jiu-Jitsu Academy</h1>
+
+    <!-- Mobile menu button -->
+    <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+
+    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+      <a href="#programs">Programs</a>
+      <a href="#book">Book Trial</a>
+      <a href="https://inspirejiujitsuacademy.gymdesk.com/shop?utm_source=site&utm_medium=nav&utm_campaign=shop" target="_blank" rel="noopener">Shop</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
 
   <!-- Main content -->
   <main>
