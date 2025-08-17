@@ -70,10 +70,10 @@
       <nav id="main-nav" class="main-nav" aria-label="Main navigation">
         <a href="#programs">Programs</a>
         <a href="#book">Book Trial</a>
-        <!-- Use local redirect pages you control -->
-        <a href="/shop/">Shop</a>
+        <!-- Use local redirect pages (relative paths) -->
+        <a href="shop/">Shop</a>
         <a href="#contact">Contact</a>
-        <a class="btn-login" href="/login/">Log in</a>
+        <a class="btn-login" href="login/">Log in</a>
       </nav>
     </div>
   </header>
@@ -196,6 +196,14 @@
     const nav = document.getElementById('main-nav');
     if (toggle && nav) {
       toggle.addEventListener('click', () => {
-        const
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!open));
+        nav.classList.toggle('is-open', !open);
+      });
+    }
+  </script>
 
-
+  <!-- ===== External widgets (Gymdesk) ===== -->
+  <script src="https://gymdesk.com/js/widgets.js"></script>
+</body>
+</html>
