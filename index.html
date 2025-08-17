@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -71,10 +72,15 @@
         <a href="#programs">Programs</a>
         <a href="#book">Book Trial</a>
 
-        <!-- IMPORTANT: use full URLs to your project’s subpaths to avoid 404s -->
-        <a href="https://mathiascodes123456.github.io/inspire-bjj-houston/shop/">Shop</a>
+        <!-- Send users to Gymdesk for shop & member login (opens new tab) -->
+        <a href="https://inspirejiujitsuacademy.gymdesk.com/shop?utm_source=newsite&utm_medium=nav&utm_campaign=shop"
+           target="_blank" rel="noopener">Shop</a>
         <a href="#contact">Contact</a>
-        <a class="btn-login" href="https://mathiascodes123456.github.io/inspire-bjj-houston/login/">Log in</a>
+        <a class="btn-login"
+           href="https://inspirejiujitsuacademy.gymdesk.com/login?utm_source=newsite&utm_medium=nav&utm_campaign=login"
+           target="_blank" rel="noopener">Log in</a>
+        <!-- If your account uses a different login path, swap to:
+             https://inspirejiujitsuacademy.gymdesk.com/members/login -->
       </nav>
     </div>
   </header>
@@ -86,7 +92,11 @@
       <div class="container">
         <h2>Train Brazilian Jiu Jitsu (BJJ) in River Oaks, Houston</h2>
         <p>Beginner-friendly. Kids and adults. Clean mats. World-class coaching.</p>
-        <a class="btn" href="#book">Book Your Free Trial</a>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn" href="#book">Book Your Free Trial</a>
+          <!-- Optional: direct Gymdesk signup CTA if you have it -->
+          <!-- <a class="btn" href="REPLACE_WITH_GYMDESK_SIGNUP_URL" target="_blank" rel="noopener">Join Now</a> -->
+        </div>
       </div>
     </section>
 
@@ -98,22 +108,24 @@
           <article>
             <h3>Adults BJJ (Gi)</h3>
             <p>Fundamentals and advanced classes to build skill and fitness.</p>
-            <a class="btn" href="#book">Book Trial</a>
+            <a class="btn" href="#book">View Schedule</a>
           </article>
           <article>
             <h3>No-Gi / Submission Grappling</h3>
             <p>Fast-paced training focused on control and submissions.</p>
-            <a class="btn" href="#book">Book Trial</a>
+            <a class="btn" href="#book">View Schedule</a>
           </article>
           <article>
             <h3>Kids Brazilian Jiu Jitsu (Ages 4+)</h3>
             <p>Confidence, focus, and fun in a safe, structured class.</p>
-            <a class="btn" href="#book">Book Trial</a>
+            <a class="btn" href="#book">View Schedule</a>
           </article>
           <article>
             <h3>Private Lessons</h3>
             <p>One-on-one coaching tailored to your goals.</p>
-            <a class="btn" href="#book">Book Trial</a>
+            <!-- Optional: deep link to a Gymdesk private-lesson product/booking -->
+            <!-- <a class="btn" href="REPLACE_WITH_PRIVATE_LESSON_URL" target="_blank" rel="noopener">Book</a> -->
+            <a class="btn" href="#book">View Schedule</a>
           </article>
         </div>
       </div>
@@ -208,4 +220,3 @@
   <script src="https://gymdesk.com/js/widgets.js"></script>
 </body>
 </html>
-
